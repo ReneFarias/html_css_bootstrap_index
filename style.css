@@ -1,0 +1,139 @@
+/* tudo que estiver dentro do body recebe esses atributos da classe pai /
+body{
+    / peso da fonte, 400 normal 700 negrito /
+    font-weight: 400;
+    / fontes usadas, pela ordem, se não usar a primeira pega a segunda e assim vai /
+    font-family: Lato, Helvetica, sans-serif;
+    font-size: 15px;
+    / 2.2 x 15px, multiplica espaçamento entre linha, o em é para ser relativo ao padrão, ideal para responsividade /
+    line-height: 2.2em;
+    / cor do texto /
+    color: #818181;
+    / para tirar bordas brancas por padrão /
+    margin: 0;
+}
+header{
+    background-color: #f4511e;
+}
+section, footer{
+    margin: 40px;
+} */
+h1{
+    font-size: 63px;
+    color: white;
+    /* espaçamento da parte de dentro */
+    padding: 15px;
+    /* centralizar ao centro */
+    text-align: center;
+}
+h2{
+    font-size: 54px;
+    /* transformar texto para maiusculo 
+    text-transform: uppercase; */
+    color: #303030;
+    font-weight: 600;
+}
+/*nav li a{
+    padding: 10px;
+    color: white;
+    / tirar linha do link /
+    text-decoration: none;
+}
+
+nav li{
+    / flutuar lado esquerdo /
+    float: left;
+}
+
+nav ul{
+    / flutuar ficar sobre os outros elementos /
+    float: right;
+    / tirar padrão de listas /
+    list-style: none;
+}
+
+nav{
+    font-size: 12px;
+    line-height: 4px;
+    / altura /
+    height: 50px;
+    background-color: #d63232;
+    padding-right: 40px;
+}* TIVE QUE TIRAR PARA USAR MENU NAVBAR QUE PEGUEI PESQUISANDO NO SITE DO BOOTSTRAP /
+
+table{
+    width: 100%;
+}
+
+table td{
+    color: #303030;
+    padding: 5px;
+}
+
+// ATENÇÂO! para utilizarmos bootstraps nós tiramos a edição no css, e adicionamos classes especificas do bootstrap; por exemplo: class="text-center" = serve para alinhar o texto no centro. Varias outras classes são pre existente no bootstraps, veja sua utilização no html.
+/* nth-child(even) = dessa pseudo classes qual linha quer selecionar?(par)/
+table tr:nth-child(even){
+    background-color: #e9e9e9;
+}
+/ nth-child(even) = dessa pseudo classes qual linha quer selecionar?(impar)/
+table tr:nth-child(odd){
+    background-color: #afa9a9;
+}
+
+table thead th{
+    background-color: #d63232;
+    color: white;
+} */
+
+/* para selecionar id utiliza "#", para selecionar classes utiliza "."  
+#pacotes .figuras figure{ */
+    /* alinhado um do lado do outro 
+    display: inline-block; 
+} */
+/* com a "," pegamos varios elementos, lembrando o conceito de classe pai e subclasses para acessar e atribuir os valores 
+#pacotes .figuras, #pacotes .videos{
+    text-align: center;
+}
+ */
+
+
+
+
+/* BOOTSTRAP */
+
+/*
+Sistema de GRID, lembrando se adapta a qualquer dispositivo:
+col- (extra smal devices - telas com largura inferior a 576px)
+col-sm- (smal devices - telas com largura igual ou superior a 576px)
+col-md- (medium devices - telas com largura igual ou superior a 768px)
+col-lg- (large devices - telas com largura igual ou superior a 992px)
+col-xl- (xlarge devices - telas com largura igual ou superior a 1200px)
+col-xxl- (xxlarge devices - telas com largura igual ou superior a 1400px)
+
+*/
+
+/*
+Trabalhando com caixas
+container (/Extra Small <576px/ = 100% /Small ≥576px/ = 540px /Medium ≥768px/ = 720px /Large ≥992px/ = 960px /X-Large ≥1200px/ = 1140px /XX-Large ≥1400px/ = 1320px)
+container-sm (/Extra Small <576px/ = 100% /Small ≥576px/ = 540px /Medium ≥768px/ = 720px /Large ≥992px/ = 960px /X-Large ≥1200px/ = 1140px /XX-Large ≥1400px/ = 1320px)
+container-md (/Extra Small <576px/ = 100% /Small ≥576px/ = 100% /Medium ≥768px/ = 720px /Large ≥992px/ = 960px /X-Large ≥1200px/ = 1140px /XX-Large ≥1400px/ = 1320px)
+container-lg (/Extra Small <576px/ = 100% /Small ≥576px/ = 100% /Medium ≥768px/ = 100% /Large ≥992px/ = 960px /X-Large ≥1200px/ = 1140px /XX-Large ≥1400px/ = 1320px)
+container-xl (/Extra Small <576px/ = 100% /Small ≥576px/ = 100% /Medium ≥768px/ = 100% /Large ≥992px/ = 100% /X-Large ≥1200px/ = 1140px /XX-Large ≥1400px/ = 1320px)
+container-xxl (/Extra Small <576px/ = 100% /Small ≥576px/ = 100% /Medium ≥768px/ = 100% /Large ≥992px/ = 100% /X-Large ≥1200px/ = 100% /XX-Large ≥1400px/ = 1320px)
+container-fluid (/Extra Small <576px/ = 100% /Small ≥576px/ = 100% /Medium ≥768px/ = 100% /Large ≥992px/ = 100% /X-Large ≥1200px/ = 100% /XX-Large ≥1400px/ = 100%)
+
+*/
+/* podemos personalizar nosso bootstrap, pegamos uma classe e passamos parametros pelo arquivo css; dessa forma customizamos o bootstrap */
+.carousel-caption h5{
+    font-size: 80px;
+    color: #ffc107;
+    text-shadow: 2px 2px 2px black;
+}
+/*
+Modelos
+O Bootstrap possui muitos modelos e exemplos que podemos utilizar como base para 
+construir páginas web. A seguir alguns sites de onde encontrar:
+● https://getbootstrap.com/docs/5.1/examples/
+● https://www.w3schools.com/bootstrap5/bootstrap_templates.php
+● https://themes.getbootstrap.com/
+*/

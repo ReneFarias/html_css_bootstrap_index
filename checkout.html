@@ -1,0 +1,347 @@
+<!-- tag tipo html5 -->
+<!DOCTYPE html>
+<!-- tag do conteudo html e linguagem -->
+<html lang="pt-BR">
+    <!-- tags importantes semanticas: header = cabeçalho; nav = navegação; section = sessão; article = parte independente; aside = barra lateral; footer = rodape -->
+    <!-- tag head onde tem os paremetros da pagina -->
+<head>
+    <!-- CSS INTERNAL = <style> seletor{atributo: valor;}
+    <style>
+        p{
+            color: green;
+        } -->
+    </style>
+    <!-- simbologia das letras -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- essa tag é para dar instrução para o html que ficar responsivos em dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- titulo da pagina -->
+    <title>Checkout - Viagem dos sonhos</title>
+    <!-- CSS = Cascading Style Sheets = Folha de Estilo em cascata = Linguagem definida para a formatação da apresentação da página HTML: -Cor -Fonte -Tamanho de texto -Espaçamento entre Elementos -Posicionamento dos Elementos -Imagens de fundo ou cores de fundos -Tornar o layout responsivo em diferentes tamanhos de telas -->
+    <!-- crie um arquivo style.css e crie a tag link e coloque o caminho do css EXTERNO -->
+    <link rel="stylesheet" href="style.css">
+    <!-- composição: SELETOR{PROPRIEDADE:VALOR;}-->
+    <!-- BOOTSTRAP link para importar a biblioteca de icones, você acha no site na guia icons e no final tem o link na parte CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <!-- https://getbootstrap.com/ Bootstrap é uma enorme coleção de pedaços de código reutilizáveis 
+    e versáteis que são escritos em CSS, HTML e JavaScript. Como também é um 
+    framework, todas as bases já estão estabelecidas para o desenvolvimento web 
+    responsivo, e tudo o que os desenvolvedores precisam fazer é inserir o código no 
+    sistema de grade pré-definido.
+    Existem algumas ferramentas gratuitas que vêm como parte do pacote, que permitem 
+    aos designers construir os componentes de interface do site mais comuns, bem como 
+    os mais responsivos, aumentando a versatilidade do framework -->
+    <!-- o cdn no link é comunmente usado para pegar das bibliotecas alocadas em repositorios; ATENÇÂO! colocar link do bootstrap para o javascript antes do fechamento do body -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> 
+</head>
+
+<!-- corpo da pagina, conteudo que sera exibido -->
+<body>
+    <!-- cabeçalho, influencia nos mecanismos de busca. Usamos a classe container-fluid para ocupar 100% do espaço do dispositivo. p-2 = padding = 0.5 escala; bg-warning = background - cor alaranjada, text-center = texto = ao centro -->
+<header class="container-fluid p-2 bg-warning text-center">
+    <!-- MENU PEGUE NO SITE DO BOOTSTRAP; IREMOS PERSONALIZA-LO -->
+    <!-- troquei a cor no bg-cor -->
+    <nav class="navbar navbar-expand-lg bg-warning">
+        <div class="container-fluid">
+            <!-- alterei Navbar para viagem dos sonhos. Nas proximas linhas tem estilos de botôes para se adaptar aos dispositivos -->
+          <a class="navbar-brand" href="/index.html">Viagem dos sonhos</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- adicionei justify-content-end, para posicionar elemento no fim, nesse caso o conteudo. E add bg-warning = background cor de fundo warning do menu seleção -->
+          <div class="collapse navbar-collapse justify-content-end bg-warning" id="navbarSupportedContent">
+            <!-- e removi me-auto para alteração anterior surtir efeito -->
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <!-- alteramos home para pacotes, tinha o atributo active do js que quer dizer ativado, removi para utilizar -->
+                <a class="nav-link" aria-current="page" href="#">Pacotes</a>
+              </li>
+              <li class="nav-item">
+                <!-- alteramos link para taxas -->
+                <a class="nav-link" href="#">Taxas</a>
+              </li>
+              <li class="nav-item dropdown">
+                <!-- alteramos dropdown para cotato-->
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Contato
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <!-- criei uma nova li para importar o icone pego no site bootstrap, adicione a class="nav-item" que é para utilizar o icone por padrão -->
+              <li class="nav-item">
+               <!-- pesquise cart na barra no menu icones, clique no que mais gostar, e copie o codigo da classe. Copiamos a tag a link taxa e colocamos dentro dela nosso carrinho para alinhar -->
+               <a class="nav-link" href="#"><i class="bi bi-cart3"></i></a>
+              </li>
+             <!-- <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li> esse item seria exemplo para desabilitado para demostração, vamos comentalo -->
+            </ul>
+            <!--<form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> COMENTEI PARA NÂO ELIMINAR -->
+          </div>
+        </div>
+      </nav>
+      </header>
+
+      <!-- Pegando templates no site do bootstrap https://getbootstrap.com/ ; em seguida abrimos o codigo fonte da pagina e copiamos o conteudo main; lembrando que pegamos a nav e footer do index -->
+      <!-- classe container atribui um tamanho fixo, sem ser uma largura de 100%, centraliza mais -->
+      <main class="container">
+        <div class="py-5 text-center">
+          <!--<img class="d-block mx-auto mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">-->
+          <h2>Pagamento</h2>
+          <!--<p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>-->
+        </div>
+    
+        <div class="row g-5">
+          <div class="col-md-5 col-lg-4 order-md-last">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-primary">Your cart</span>
+              <span class="badge bg-primary rounded-pill">3</span>
+            </h4>
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Product name</h6>
+                  <small class="text-body-secondary">Brief description</small>
+                </div>
+                <span class="text-body-secondary">$12</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Second product</h6>
+                  <small class="text-body-secondary">Brief description</small>
+                </div>
+                <span class="text-body-secondary">$8</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Third item</h6>
+                  <small class="text-body-secondary">Brief description</small>
+                </div>
+                <span class="text-body-secondary">$5</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+                <div class="text-success">
+                  <h6 class="my-0">Promo code</h6>
+                  <small>EXAMPLECODE</small>
+                </div>
+                <span class="text-success">−$5</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Total (USD)</span>
+                <strong>$20</strong>
+              </li>
+            </ul>
+    
+            <form class="card p-2">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Promo code">
+                <button type="submit" class="btn btn-secondary">Redeem</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-7 col-lg-8">
+            <h4 class="mb-3">Endereço de pagamento</h4>
+            <form class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+    
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+    
+                <div class="col-12">
+                  <label for="username" class="form-label">Username</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" id="username" placeholder="Username" required>
+                  <div class="invalid-feedback">
+                      Your username is required.
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-12">
+                  <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+                  <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                  <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                  </div>
+                </div>
+    
+                <div class="col-12">
+                  <label for="address" class="form-label">Address</label>
+                  <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                  <div class="invalid-feedback">
+                    Please enter your shipping address.
+                  </div>
+                </div>
+    
+                <div class="col-12">
+                  <label for="address2" class="form-label">Address 2 <span class="text-body-secondary">(Optional)</span></label>
+                  <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                </div>
+    
+                <div class="col-md-5">
+                  <label for="country" class="form-label">Country</label>
+                  <select class="form-select" id="country" required>
+                    <option value="">Choose...</option>
+                    <option>United States</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+                </div>
+    
+                <div class="col-md-4">
+                  <label for="state" class="form-label">State</label>
+                  <select class="form-select" id="state" required>
+                    <option value="">Choose...</option>
+                    <option>California</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
+                </div>
+    
+                <div class="col-md-3">
+                  <label for="zip" class="form-label">Zip</label>
+                  <input type="text" class="form-control" id="zip" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Zip code required.
+                  </div>
+                </div>
+              </div>
+    
+              <hr class="my-4">
+    
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="same-address">
+                <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+              </div>
+    
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="save-info">
+                <label class="form-check-label" for="save-info">Save this information for next time</label>
+              </div>
+    
+              <hr class="my-4">
+    
+              <h4 class="mb-3">Payment</h4>
+    
+              <div class="my-3">
+                <div class="form-check">
+                  <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                  <label class="form-check-label" for="credit">Credit card</label>
+                </div>
+                <div class="form-check">
+                  <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                  <label class="form-check-label" for="debit">Debit card</label>
+                </div>
+                <div class="form-check">
+                  <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                  <label class="form-check-label" for="paypal">PayPal</label>
+                </div>
+              </div>
+    
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <label for="cc-name" class="form-label">Name on card</label>
+                  <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                  <small class="text-body-secondary">Full name as displayed on card</small>
+                  <div class="invalid-feedback">
+                    Name on card is required
+                  </div>
+                </div>
+    
+                <div class="col-md-6">
+                  <label for="cc-number" class="form-label">Credit card number</label>
+                  <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+    
+                <div class="col-md-3">
+                  <label for="cc-expiration" class="form-label">Expiration</label>
+                  <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Expiration date required
+                  </div>
+                </div>
+    
+                <div class="col-md-3">
+                  <label for="cc-cvv" class="form-label">CVV</label>
+                  <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Security code required
+                  </div>
+                </div>
+              </div>
+    
+              <hr class="my-4">
+    
+              <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+            </form>
+          </div>
+        </div>
+      </main>
+
+        <!-- rodape -->
+        <!-- container-fluid = largura 100% em dispositivos; e background-escuro,  p-2 = padding=2, texto-centro -->
+        <footer class="container-fluid bg-dark p-2 text-center">
+            <p class="text-light"> Desenvolvido por Renê</p>
+        </footer>  
+
+        <!-- bootstrap para funcionamento no javascript, se fosse chamado no inicio tornaria o carregamento da pagina mais lento -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        </body>
+
+        <!-- : Recurso do BOOTSTRAP, caixa de dialogo otimizada, vai no site do https://getbootstrap.com/ e pesquisa modal, copia e bola depois do body e personaliza -->
+        <!-- Button trigger modal -->
+        <!-- data-bs-toggle="modal" data-bs-target="#exampleModal" Esses elemtos é o que colocamos no botão para chamar, copie e cole esses atributos se quiser apague dessa parte depois de colado nos botões 
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+        </button> -->
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- modifique as menssagens como a do titulo, do corpo = modal-body, e dos botões -->
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Suas Compras</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                Produto adicionado ao carrinho!
+                </div>
+                <div class="modal-footer">
+                    <!-- cores dos botões primary = azul, success = verde, secondary = cinza -->
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continuar comprando...</button>
+                <button type="button" class="btn btn-success">Finalizar compra!</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        </html>
